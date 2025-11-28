@@ -1,0 +1,95 @@
+.form{
+    width: 720px;
+    max-width: calc(100% - 48px);
+    margin: 48px auto;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.03);
+    color: #435a56;
+}
+
+/* first row (firstName / lastName) - markup already has a wrapper div */
+.form > div {
+   display: flex;
+   gap: 10px;
+   
+}
+.form > div > div {
+    width: 100%;
+    
+}
+
+/* generic labels and spacing */
+.form label{
+    display: block;
+    font-size: 13px;
+    color: #4b5b57;
+    margin-bottom: 8px;
+}
+
+/* inputs & textarea */
+.form input,
+.form textarea,
+.form input[type="email"],
+.form input[type="text"]{
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 2px solid #dbe6e3;
+    font-size: 15px;
+    background: transparent;
+    color: #1f3b38;
+    outline: none;
+    transition: border-color .12s, box-shadow .12s;
+    margin-bottom: 14px;
+}
+
+/* focus */
+.form input:focus,
+.form textarea:focus{
+    border-color: #cbe6de;
+    box-shadow: 0 0 0 3px rgba(11,107,83,0.06);
+}
+
+/* radio option group - use :has (modern browsers) to style labels that contain radios */
+.form label:has(input[type="radio"]){
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 2px solid #dbe6e3;
+    background: transparent;
+    color: #2f4844;
+    margin-bottom: 8px;
+    width: 48%;
+    box-sizing: border-box;
+}
+.form label:has(input[type="radio"]) input[type="radio"]{
+    margin: 0;
+    width: 16px;
+    height: 16px;
+}
+/* checkbox line */
+.form label:has(input[type="checkbox"]){
+    display:flex;
+    gap:10px;
+    align-items:center;
+    margin-top: 8px;
+    color: #435a56;
+}
+
+/* submit */
+.form button[type="submit"]{
+    width: 100%;
+    padding: 14px;
+    background: #0b6b53;
+    color: #ffffff;
+    border: 0;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 12px;
+}
